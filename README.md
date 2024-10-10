@@ -1,10 +1,8 @@
-# Repository for the paper submitted to NeurIPS 2024 "Principled Bayesian Optimization in Collaboration with Human Experts"
+# COBOL: Collaborative Bayesian Optimization with Labelling Experts (COBOL)"
 
-BASQ: Bayesian Alternately Subsampled Quadrature
+This repository contains the Python code that was presented for the following paper.
 
-This repository contains the python code that was presented for the following paper.
-
-[1] Wenjie Xu*, Masaki Adachi*, Colin N. Jones, Michael A. Osborne, Principled Bayesian Optimization in Collaboration with Human Experts. Advances in Neural Information Processing Systems 35 (NeurIPS), 2024
+[1] Wenjie Xu*, Masaki Adachi*, Colin N. Jones, Michael A. Osborne, Principled Bayesian Optimization in Collaboration with Human Experts. Advances in Neural Information Processing Systems 35 (NeurIPS; **Spotlight**), 2024
 Links: NeurIPS proceedings, arXiv, OpenReview
 *: Equal contribution
 
