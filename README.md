@@ -1,4 +1,4 @@
-# COBOL: Collaborative Bayesian Optimization with Labelling Experts (COBOL)"
+# COBOL: Collaborative Bayesian Optimization with Labelling Experts
 
 This repository contains the Python code that was presented for the following paper.
 
