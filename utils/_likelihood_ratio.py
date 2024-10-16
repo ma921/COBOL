@@ -173,7 +173,9 @@ class PredictiveDistribution:
     def preferential_likelihood(self, y):
         return 1 / (1 + np.exp(-y))
     
-    def predictive_distribution(self, x, likelihood=False):
+    def predictive_distribution(self, x, likelihood=False, transform=False):
+        if transform:
+            x = self.domain.transform_X(x)
         if x.shape[0] == 1:
             y_lcb, y_ucb = self.confidence_bound(x, likelihood=likelihood)
             y_mle = self.predictive_mle(x, likelihood=likelihood)

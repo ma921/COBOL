@@ -65,8 +65,10 @@ class SimpleGP(TemplateGP):
         self.gp = self.set_model()
         self.n_data, self.n_dims = train_X.shape
         
-    def predictive_mean_and_stddev(self, X):
+    def predictive_mean_and_stddev(self, X, transform=False):
         X = cleansing_x(X)
+        if transform:
+            X = self.domain.transform_X(X)
         pred = self.gp.likelihood(self.gp(X))
         return pred.mean, pred.stddev
         
@@ -74,7 +76,7 @@ class SimpleGP(TemplateGP):
         self.conditioning(train_X, train_Y)
         # Type-II MLE
         mll = gpytorch.mlls.ExactMarginalLogLikelihood(self.gp.likelihood, self.gp)
-        botorch.fit.fit_gpytorch_model(mll)
+        botorch.fit.fit_gpytorch_mll(mll)
         self.gp.eval()
 
     def get_cov_cache(self):
